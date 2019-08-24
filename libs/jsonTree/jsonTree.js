@@ -255,7 +255,7 @@ var jsonTree = (function() {
 
             if (e.shiftKey) {
                 document.getSelection().removeAllRanges();
-                alert(self.getJSONPath());
+                console.log(self.getJSONPath());
                 return;
             }
         }, false);
@@ -490,7 +490,7 @@ var jsonTree = (function() {
 
                 if (e.shiftKey) {
                     document.getSelection().removeAllRanges();
-                    alert(self.getJSONPath());
+                    console.log(self.getJSONPath());
                     return;
                 }
 
@@ -715,7 +715,7 @@ var jsonTree = (function() {
          */
         loadData : function(jsonObj) {
             if (!utils.isValidRoot(jsonObj)) {
-                alert('The root should be an object or an array');
+                console.log('The root should be an object or an array. Instead, got \"' + jsonObj +'\"');
                 return;
             }
 
